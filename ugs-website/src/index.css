@@ -1,0 +1,233 @@
+/* RESET */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  padding-top: 100px;
+  overflow-x: hidden;
+}
+
+/* SMOOTH SCROLL */
+html {
+  scroll-behavior: smooth;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 60px;
+  box-sizing: border-box;
+
+  background: linear-gradient(to right, #0b2c4d, #0f3b6d);
+  color: white;
+
+  z-index: 1000;
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.logo h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.logo p {
+  margin: 0;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+/* NAV LINKS */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #4da6ff;
+}
+
+/* BUTTON */
+.nav-btn button {
+  background: #2b6cb0;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  font-size: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav-btn button:hover {
+  background: #1a4f85;
+}
+
+/* SECTION BASE */
+.section {
+  padding: 100px 60px;
+  text-align: center;
+}
+
+section {
+  scroll-margin-top: 100px;
+}
+
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #0f2f57;
+}
+
+.section p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #444;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ABOUT */
+#about {
+  background: #f8fafc;
+}
+
+/* WHY US */
+#why-us {
+  background: #ffffff;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.why-card {
+  background: #f1f5f9;
+  padding: 25px;
+  border-radius: 10px;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.why-card:hover {
+  transform: translateY(-5px);
+  background: #e2e8f0;
+}
+
+.why-card h3 {
+  margin-bottom: 10px;
+  color: #0f2f57;
+}
+
+/* QUALITY */
+#quality {
+  background: linear-gradient(to right, #0b2c4d, #0f3b6d);
+  color: white;
+}
+
+#quality h2 {
+  color: white;
+}
+
+#quality p {
+  color: #dbeafe;
+}
+
+/* ================= HERO SECTION ================= */
+
+/* HERO CONTAINER */
+.hero {
+  position: relative;
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* BACKGROUND IMAGE (IMPORTANT FIX) */
+.hero-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: "contain";
+  object-position: center; /* 🔥 changed from left → better balance */
+  top: 0;
+  left: 0;
+  z-index: 0;
+
+  /* 🔥 improves clarity slightly */
+  filter: contrast(1.05) brightness(1.05);
+}
+
+/* OVERLAY (MAIN FIX — LESS DARK) */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to right,
+    rgba(11, 44, 77, 0.45),  /* 🔥 reduced from 0.6 */
+    rgba(15, 59, 109, 0.15)  /* 🔥 reduced from 0.3 */
+  );
+
+  z-index: 1;
+}
+
+/* TEXT */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  padding-left: 60px;
+  max-width: 600px;
+}
+
+/* HEADING */
+.hero h1 {
+  font-size: 48px;
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* SUBTEXT (MORE VISIBLE) */
+.hero p {
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+
+  /* 🔥 makes text pop */
+  text-shadow: 0px 2px 8px rgba(0,0,0,0.4);
+}
