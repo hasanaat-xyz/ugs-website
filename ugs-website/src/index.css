@@ -307,12 +307,31 @@ section,
   .hero-logo-top {
     top: 80px;
     right: 15px;
-    width: 70px;
+    width: 180px;
+     background: transparent;
+  border-radius: 8px;
+
   }
+}
+.hero-logo-top {
+  position: absolute;
+  top: 10px;
+  right: 60px;
+  width: 180px;
+  z-index: 3;
+  opacity: 0.95;
+  filter: drop-shadow(0 0 12px rgba(255,255,255,0.4));
 }
 
 @media (max-width: 576px) {
   .team-grid {
     grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .hero-logo-top {
+    width: 110px;
+    right: 15px;
+    top: 90px;
   }
 }
