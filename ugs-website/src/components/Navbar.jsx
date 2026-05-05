@@ -10,7 +10,7 @@ export default function Navbar() {
       <div className="logo">
         <img src="/logo.png" alt="UGS Logo" />
         <div>
-          <h2>UGS</h2>
+          <h2>UGS INTERNATIONAL</h2>
           <p>Unity Global Solutions</p>
         </div>
       </div>
