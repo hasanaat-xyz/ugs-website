@@ -370,3 +370,52 @@ section,
     grid-template-columns: 1fr;
   }
 }
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+
+/* MOBILE NAVBAR */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #0f3b6d;
+    flex-direction: column;
+    width: 200px;
+    padding: 20px;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-btn {
+    display: none; /* hide button on mobile */
+  }
+
+  .logo img {
+    height: 35px;
+  }
+
+  .logo h2 {
+    font-size: 16px;
+  }
+
+  .logo p {
+    font-size: 10px;
+  }
+}
