@@ -20,7 +20,7 @@ export default function Footer() {
       {/* CENTER */}
       <div>
         <p>+91 9949636274</p>
-        <p>mwk@ugsinternational.com</p>
+        <p>info@ugsinternational.com</p>
       </div>
 
       {/* RIGHT - SOCIAL MEDIA */}
