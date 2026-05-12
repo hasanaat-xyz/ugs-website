@@ -40,7 +40,7 @@ export default function Footer() {
             <FaFacebook />
           </a>
 
-          <a href="https://twitter.com/ugsworldwide" target="_blank" rel="noopener noreferrer" style={styles.iconLink}>
+          <a href="https://twitter.com/ugs_intnl" target="_blank" rel="noopener noreferrer" style={styles.iconLink}>
             <FaXTwitter />
           </a>
 
