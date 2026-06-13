@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Marina Website - Lake Pass Widget Demo</title>
+  <style>
+    body { font-family: Georgia, serif; max-width: 900px; margin: 0 auto; padding: 40px 20px; color: #333; }
+    h1 { color: #1e3a5f; }
+    .hero { background: linear-gradient(135deg, #0ea5e9, #0369a1); color: white; padding: 60px 40px; border-radius: 12px; margin-bottom: 40px; }
+    .widget-section { background: #f8fafc; padding: 30px; border-radius: 12px; }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <h1>Harbor View Marina</h1>
+    <p>Welcome to our marina. Book a boat rental directly below.</p>
+  </div>
+  <div class="widget-section">
+    <h2>Book a Boat</h2>
+    <div id="lakepass-widget" data-marina="marina-a" data-api="http://localhost:8000"></div>
+  </div>
+  <script src="./dist/lakepass-widget.iife.js"></script>
+</body>
+</html>

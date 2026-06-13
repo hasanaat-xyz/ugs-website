@@ -1,0 +1,19 @@
+{
+  "name": "lake-pass",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:api\" \"npm run dev:dashboard\" \"npm run dev:consumer\" \"npm run dev:widget\"",
+    "dev:api": "npm run dev --workspace=backend",
+    "dev:dashboard": "npm run dev --workspace=apps/dashboard",
+    "dev:consumer": "npm run dev --workspace=apps/consumer",
+    "dev:widget": "npm run dev --workspace=apps/widget",
+    "seed": "npm run seed --workspace=backend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
