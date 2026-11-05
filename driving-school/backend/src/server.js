@@ -18,7 +18,8 @@ app.use(
       "https://driving-school-app-one.vercel.app",
       "https://driving-school-app-xktv.vercel.app", // <--- Add your current frontend URL here
       "http://localhost:3000",    
-      "http://localhost:5173",                 // <--- Helpful for local testing
+      "http://localhost:5173",   
+      "https://driving-school-qgk9e0yy7-hasanaat00-8100.vercel.app/",              // <--- Helpful for local testing
     ],
     methods: ["GET", "POST", "PATCH", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
