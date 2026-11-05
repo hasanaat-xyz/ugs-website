@@ -2,7 +2,7 @@
 import { useState } from "react";
 import "./App.css";
 
-const API = "http://localhost:5000/api";
+const API = "VITE_API_URL=https://deccan-motor-driving-school.onrender.com";
 
 const initialForm = {
   fullName: "",
