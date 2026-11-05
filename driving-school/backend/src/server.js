@@ -1,4 +1,3 @@
-
 require("dotenv").config();
 
 const express = require("express");
@@ -10,19 +9,16 @@ const authRoutes = require("./routes/authRoutes");
 const studentRoutes = require("./routes/studentRoutes");
 
 const app = express();
-app.use("/api/auth", authRoutes);
-app.use("/api/candidates", candidateRoutes);
-app.use("/api/student", studentRoutes);
 
 app.use(
   cors({
     origin: [
       "https://driving-school-app-vpqk.vercel.app",
       "https://driving-school-app-one.vercel.app",
-      "https://driving-school-app-xktv.vercel.app", // <--- Add your current frontend URL here
-      "http://localhost:3000",    
-      "http://localhost:5173",   
-      "https://driving-school-qgk9e0yy7-hasanaat00-8100.vercel.app/",              // <--- Helpful for local testing
+      "https://driving-school-app-xktv.vercel.app",
+      "https://driving-school-qgk9e0yy7-hasanaat00-8100.vercel.app",
+      "http://localhost:3000",
+      "http://localhost:5173",
     ],
     methods: ["GET", "POST", "PATCH", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
@@ -36,6 +32,10 @@ app.get("/", (req, res) => {
     message: "Driving School API is running!",
   });
 });
+
+app.use("/api/auth", authRoutes);
+app.use("/api/candidates", candidateRoutes);
+app.use("/api/student", studentRoutes);
 
 const PORT = process.env.PORT || 5000;
 
