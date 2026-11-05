@@ -10,6 +10,9 @@ const authRoutes = require("./routes/authRoutes");
 const studentRoutes = require("./routes/studentRoutes");
 
 const app = express();
+app.use("/api/auth", authRoutes);
+app.use("/api/candidates", candidateRoutes);
+app.use("/api/student", studentRoutes);
 
 app.use(
   cors({
@@ -33,10 +36,6 @@ app.get("/", (req, res) => {
     message: "Driving School API is running!",
   });
 });
-
-app.use("/api/auth", authRoutes);
-app.use("/api/candidates", candidateRoutes);
-app.use("/api/student", studentRoutes);
 
 const PORT = process.env.PORT || 5000;
 
