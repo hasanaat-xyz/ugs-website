@@ -16,6 +16,8 @@ app.use(
     origin: [
       "https://driving-school-app-vpqk.vercel.app",
       "https://driving-school-app-one.vercel.app",
+      "https://driving-school-app-xktv.vercel.app", // <--- Add your current frontend URL here
+      "http://localhost:3000",                     // <--- Helpful for local testing
     ],
     methods: ["GET", "POST", "PATCH", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
