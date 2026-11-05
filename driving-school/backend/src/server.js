@@ -1,3 +1,4 @@
+
 require("dotenv").config();
 
 const express = require("express");
@@ -10,7 +11,17 @@ const studentRoutes = require("./routes/studentRoutes");
 
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "https://driving-school-app-vpqk.vercel.app",
+      "https://driving-school-app-one.vercel.app",
+    ],
+    methods: ["GET", "POST", "PATCH", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
+);
+
 app.use(express.json({ limit: "1mb" }));
 
 app.get("/", (req, res) => {
@@ -33,7 +44,7 @@ async function startServer() {
   await connectDB();
 
   app.listen(PORT, () => {
-    console.log(`Server running at http://localhost:${PORT}`);
+    console.log(`Server running on port ${PORT}`);
   });
 }
 
