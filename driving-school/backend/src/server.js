@@ -17,6 +17,7 @@ app.use(
       "https://driving-school-app-one.vercel.app",
       "https://driving-school-app-xktv.vercel.app",
       "https://driving-school-qgk9e0yy7-hasanaat00-8100.vercel.app",
+      "https://driving-school-app-git-main-hasanaat00-8100.vercel.app",
       "http://localhost:3000",
       "http://localhost:5173",
     ],
