@@ -2,8 +2,11 @@
 import { useState } from "react";
 import "./App.css";
 
-const API = "https://deccan-motor-driving-school.onrender.com/api";
+// Change line 4 from this:
+// const API = "https://deccan-motor-driving-school.onrender.com";
 
+// To this:
+const API = import.meta.env.VITE_API_URL || "https://deccan-motor-driving-school.onrender.com";
 const initialForm = {
   fullName: "",
   fatherName: "",
