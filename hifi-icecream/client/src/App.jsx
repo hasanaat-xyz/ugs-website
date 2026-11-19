@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 
-const OWNER_WHATSAPP = "919700006910";
+const OWNER_WHATSAPP = "919700572532";
 
 const flavours = [
  {
